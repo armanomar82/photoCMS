@@ -1,0 +1,193 @@
+:root {
+    --bs-blue-dark: #0B458A;
+    --bs-blue: #0B458A;
+    --bs-purple: #583EAB;
+    --bs-pink-dark: #B155BF;
+    --bs-pink: #D669A7;
+    --bs-pink-light: #D669A7;
+    --bs-white: #fff;
+    --bs-light: #f8f9fa;
+    --bs-gray-dark: #535354;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+*,
+*::before,
+*::after {
+    margin: 0 ;
+    padding:0 ;
+    box-sizing: border-box;
+}
+@media (prefers-reduced-motion: no-preference) {
+    :root {
+    scroll-behavior: smooth;
+}
+}
+body {
+    font-family: var(--bs-font-sans-serif);
+    font-weight: 400;
+    line-height: 1.5;
+    min-height: 100vh;
+    background-color:var(--bs-light);
+    -webkit-tap-highlight-color:  var(--bs-gray-dark);;
+}
+
+.container {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header header header header header'
+        'navigation content content content content content'
+        'navigation content content content content content';
+    padding: 10px;
+}
+.header {
+    
+    height: 5rem;
+}
+/* .logo img{
+    position:absolute ;
+    width:3rem;
+    height: 3rem;
+    left: 2rem;
+    top: .5rem;
+
+} */
+.grid-container > div {
+    font-size: 1.2rem;
+}
+.navigation{
+    grid-area: navigation;
+    display: flex;
+    width:60px;
+    height: 100% !important;
+    color:#fff;
+    background-color: #B155BF;
+    transition:0.5s;
+    overflow: hidden;
+
+}
+.navigation:hover{
+    width:300px;
+}
+.navigation ul{
+    width:300px;
+    top: 0;
+    left: 0;
+}
+.navigation ul li{
+    position: relative;
+    list-style: none;
+}
+.navigation ul li:hover{
+    background-color: #0B458A;
+    transition:0.5s;
+
+}
+.navigation ul li a{
+    position: relative ;
+    display: block;
+    display:flex;
+    text-decoration: none;
+    color: #fff !important;
+}
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    
+    
+}
+.navigation ul li a .icon i{
+    color:#fff !important;
+    font-size: 1.2rem;
+
+}
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+    
+}
+.content {
+    grid-area: content;
+    text-align: left !important;
+    justify-self: center;
+    height: 100vh !important;
+    width:60vw;
+    color:#aaaaaa ;
+
+}
+.content-user__photo{
+    position:relative;
+    left:50%;
+    top: 4rem;
+    transform: translateX(-50%);
+    background-image: url(./../img/upload/Ellipse.png);
+    background-size: cover;
+    border: 1px solid #dee2e6;
+    border-radius: 50%;
+    width: 7rem;
+    height: 7rem;
+}
+.content-table{
+    transform: translateX(-50%);
+    position:relative ;
+    left:50%;
+    top: 8rem;
+
+}
+.content-table table{
+    width:100%;
+}
+.content-table table th{
+    background-image: linear-gradient(#B155BF, #D669A7);
+    color: white;
+    height:3rem;
+}
+
+.content-table table, th, td {
+    border: 1px solid #f0efef;
+    border-radius: .2rem;
+
+}
+.content-table table td, th {
+    text-align: center;
+    padding: 1rem;
+
+}
+.content-table table tr {
+    background-color: #ffffff;
+}
+.content-table table tr:hover {
+    background-color:#f5f5f5;
+}
+.content-table table tr .fa-icon{
+    color:#aaaaaa;
+
+}
+.content-table table tr .fa-icon:hover, .bottom:hover{
+    background-color: #B155BF;
+    color:#fff !important;
+}
+.content-table table td{
+    height: 3rem;
+}
+
+
+
